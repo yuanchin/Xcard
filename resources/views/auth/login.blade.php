@@ -14,7 +14,7 @@
                         <div class="col-md-5">
                             <div class="card-body m-3">
                                 <div class="text-center">
-                                    <h1 class="h2 mt-1 mb-5">Xcard <i><sup>Login</sup></i></h1>
+                                    <h1 class="h2 mt-1 mb-3">Xcard <i><sup>Login</sup></i></h1>
                                 </div>
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -42,14 +42,17 @@
                                         @enderror
                                     </div>
 
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-8">
-                                            <input type="text" name="captcha" class="form-control" placeholder="驗證碼" required>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <div class="login-captcha"><img src="#" alt="captcha"></div>
-                                        </div>      
+                                    <div class="form-group">
+                                        <input id="captcha" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }}"
+                                            name="captcha" required
+                                            placeholder="請輸入驗證碼 …">
+                                        <img class="thumbnail captcha mt-3 mb-2" src="{{ captcha_src('flat') }}"
+                                            onclick="this.src='/captcha/flat?' + Math.random()" title="點擊圖片重新獲取驗證碼">
+                                        @error('captcha')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ __('輸入驗證碼有誤！') }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group">
