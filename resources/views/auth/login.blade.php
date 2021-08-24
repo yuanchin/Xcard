@@ -14,7 +14,7 @@
                         <div class="col-md-5">
                             <div class="card-body m-3">
                                 <div class="text-center">
-                                    <h1 class="h2 mb-4">{{ __('Xcard Login') }}</h1>
+                                    <h1 class="h2 mt-1 mb-5">Xcard <i><sup>Login</sup></i></h1>
                                 </div>
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -48,7 +48,7 @@
                                             <input type="text" name="captcha" class="form-control" placeholder="驗證碼" required>
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <div class="login-captcha"><img src="/admin/login/captcha" alt="captcha"></div>
+                                            <div class="login-captcha"><img src="#" alt="captcha"></div>
                                         </div>      
                                     </div>
 
