@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top shadow-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top shadow">
   <div class="container">
     <!-- Branding Image -->
     <a class="navbar-brand" href="{{ url('/') }}">
-      <strong>X</strong>card
+      <div class="h2 mb-0"><strong>X</strong>card</div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -23,15 +23,15 @@
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="https://cdn.learnku.com/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px">
+            <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle rounded-circle mr-1" width="30px" height="30px">
             {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">
+              <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
                 <i class="far fa-user mr-2"></i>
                 個人中心
               </a>
-              <a class="dropdown-item" href="">
+              <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
                 <i class="far fa-edit mr-2"></i>
                 編輯資料    
               </a>
