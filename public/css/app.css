@@ -16173,3 +16173,33 @@ body {
   border-radius: 4px;
   padding: 3px;
 }
+
+/**** ---- Topic Index Page ---- ****/
+.topics-index-page .topic-list .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 14px;
+  font-size: 1em;
+}
+.topics-index-page .topic-list a {
+  color: #444444;
+}
+.topics-index-page .topic-list .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+.topics-index-page .topic-list .meta a {
+  color: #b3b3b3;
+}
+.topics-index-page .topic-list .badge {
+  background-color: #d8d8d8;
+}
+.topics-index-page .topic-list hr {
+  border: 0;
+  border-top: 2px solid #9e9e9e;
+}
+
+/****---- Add container and footer space ----****/
+#app > div.container {
+  margin-bottom: 100px;
+}

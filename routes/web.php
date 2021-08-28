@@ -49,3 +49,6 @@ Route::post('email/resend', 'Auth\VerificationController@resend')
 
 // 使用者資源路由
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+
+// 話題資源路由
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

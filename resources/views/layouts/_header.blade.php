@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top">
   <div class="container">
     <!-- Branding Image -->
     <a class="navbar-brand" href="{{ url('/') }}">
-      <div class="h2 mb-0"><strong>X</strong>card</div>
+      <div class="h2 mb-0"><strong>X</strong><i>card</i></div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
