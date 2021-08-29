@@ -16127,7 +16127,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/**** ---- universal ---- ****/
+/******** universal ********/
 html {
   position: relative;
   min-height: 100%;
@@ -16139,13 +16139,13 @@ body {
   margin-bottom: 60px;
 }
 
-/**** ---- header ---- ****/
+/******** header ********/
 .navbar-static-top {
   margin-bottom: 40px;
   margin-top: 0px;
 }
 
-/**** ---- footer ---- ****/
+/******** footer ********/
 .footer {
   position: absolute;
   bottom: 0;
@@ -16166,7 +16166,7 @@ body {
   color: inherit;
 }
 
-/**** ---- User Register Page ---- ****/
+/******** User Register Page ********/
 .register-page img.captcha {
   cursor: pointer;
   border: 1px solid #ced4da;
@@ -16174,32 +16174,62 @@ body {
   padding: 3px;
 }
 
-/**** ---- Topic Index Page ---- ****/
-.topics-index-page .topic-list .nav > li > a {
+/******** Topic Index Page & Category Show Page********/
+.topics-index-page .topic-list .nav > li > a, .categories-show-page .topic-list .nav > li > a {
   position: relative;
   display: block;
   padding: 5px 14px;
   font-size: 1em;
 }
-.topics-index-page .topic-list a {
+.topics-index-page .topic-list a, .categories-show-page .topic-list a {
   color: #444444;
 }
-.topics-index-page .topic-list .meta {
+.topics-index-page .topic-list .meta, .categories-show-page .topic-list .meta {
   font-size: 0.9em;
   color: #b3b3b3;
 }
-.topics-index-page .topic-list .meta a {
+.topics-index-page .topic-list .meta a, .categories-show-page .topic-list .meta a {
   color: #b3b3b3;
 }
-.topics-index-page .topic-list .badge {
+.topics-index-page .topic-list .badge, .categories-show-page .topic-list .badge {
   background-color: #d8d8d8;
 }
-.topics-index-page .topic-list hr {
+.topics-index-page .topic-list hr, .categories-show-page .topic-list hr {
   border: 0;
   border-top: 2px solid #dcebf5;
 }
 
-/****---- Add container and footer space ----****/
+/******** Add container and footer space ********/
 #app > div.container {
   margin-bottom: 100px;
 }
+
+/******** Sidebar ********/
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar li a {
+  display: block;
+  text-decoration: none;
+}
+.sidebar li a .sidebar-item {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0px 10px 0px 20px;
+  cursor: pointer;
+  color: white;
+}
+.sidebar li a i {
+  padding-right: 10px;
+}
+.sidebar li a :hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/***********************  TOP Bar ********************/

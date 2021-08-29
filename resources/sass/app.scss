@@ -14,7 +14,7 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 
-/**** ---- universal ---- ****/
+/******** universal ********/
 
 html {
   position: relative;
@@ -29,7 +29,7 @@ body {
 
 
 
-/**** ---- header ---- ****/
+/******** header ********/
 
 .navbar-static-top {
   margin-bottom: 40px;
@@ -38,7 +38,7 @@ body {
 
 
 
-/**** ---- footer ---- ****/
+/******** footer ********/
 
 .footer {
   position: absolute;
@@ -64,7 +64,7 @@ body {
   }
 }
 
-/**** ---- User Register Page ---- ****/
+/******** User Register Page ********/
 .register-page {
   img.captcha {
     cursor: pointer;
@@ -75,8 +75,8 @@ body {
 }
 
 
-/**** ---- Topic Index Page ---- ****/
-.topics-index-page {
+/******** Topic Index Page & Category Show Page********/
+.topics-index-page, .categories-show-page {
   .topic-list {
     .nav > li > a {
       position: relative;
@@ -109,7 +109,49 @@ body {
   }
 }
 
-/****---- Add container and footer space ----****/
+/******** Add container and footer space ********/
 #app > div.container {
   margin-bottom: 100px;
 }
+
+/******** Sidebar ********/
+.sidebar {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  li {
+    a {
+      display:block;
+      text-decoration:none;
+
+      .sidebar-item {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 0px 10px 0px 20px;
+        cursor: pointer;
+        color: rgb(255, 255, 255)
+      }
+
+      i {
+        padding-right:10px;
+      }
+
+      :hover {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+      }
+    }
+  }
+
+  
+}
+
+
+/***********************  TOP Bar ********************/

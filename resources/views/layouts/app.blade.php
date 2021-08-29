@@ -15,7 +15,7 @@
 
 
 </head>
-<body class="bg-white">
+<body class="bg-dark">
   <div id="app" class="{{ route_class() }}-page">
 
     @include('layouts._header')
