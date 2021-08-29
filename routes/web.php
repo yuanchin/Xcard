@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Homepage
-Route::get('/', 'PagesController@root')
+Route::get('/', 'TopicsController@index')
      ->name('root');
 
 // 用戶身分驗證相關路由
