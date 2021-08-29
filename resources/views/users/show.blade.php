@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $user->name . ' 的个人中心')
+@section('title', $user->name . ' 的個人中心')
 
 @section('content')
 
@@ -10,10 +10,10 @@
     <div class="card shadow">
       <img class="card-img-top rounded-circle" src="{{ $user->avatar }}" alt="{{ $user->name }}">
       <div class="card-body mt-2">
-            <h5><strong>个人简介</strong></h5>
+            <h5><strong>個人簡介</strong></h5>
             <p>{{ $user->introduction }}</p>
             <hr>
-            <h5><strong>注册于</strong></h5>
+            <h5><strong>註冊於</strong></h5>
             <p>{{ $user->created_at->diffForHumans() }}</p>
       </div>
     </div>
@@ -26,7 +26,7 @@
     </div>
     <hr>
 
-    {{-- 用户发布的内容 --}}
+    {{-- 用戶發布的內容 --}}
     <div class="card ">
       <div class="card-body">
         暂无数据 ~_~

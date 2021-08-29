@@ -8,14 +8,17 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
+    
     /**
-     * 
-     * @param Category $category
-     * 
+     * 顯示該分類的文章
      */
-    public function show(Category $category)
+    public function show(Request $request, Category $category, Topic $topic)
     {
-        $topics = Topic::where('category_id', $category->id)->paginate(20);
+        $topics = $topic->withOrder($request->order)
+                        ->where('category_id', $category->id)
+                        ->with('user', 'category')
+                        ->paginate(20);
+
         return view('topics.index', compact('topics', 'category'));
     }
 }
