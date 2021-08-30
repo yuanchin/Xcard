@@ -15,9 +15,7 @@ class TopicsController extends Controller
     }
 
 		/**
-		 * 
-		 * 
-		 * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+		 * 顯示話題主頁
 		 */
 		public function index(Request $request, Topic $topic)
 		{

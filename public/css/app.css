@@ -16144,6 +16144,17 @@ body {
   margin-bottom: 40px;
   margin-top: 0px;
 }
+.navbar-static-top .dropdown-item .user-item {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0px 20px 0px 0px;
+  cursor: pointer;
+  color: black;
+}
+.navbar-static-top .dropdown-item .user-item i {
+  padding-right: 8px;
+}
 
 /******** footer ********/
 .footer {
