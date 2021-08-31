@@ -9,6 +9,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'Xcard') - 最受年輕人喜愛的論壇</title>
+  <meta name="description" content="@yield('description', 'Xcard')" />
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
