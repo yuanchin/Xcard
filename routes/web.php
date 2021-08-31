@@ -55,3 +55,7 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 
 // 分類資源路由
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+// 上傳圖片路由
+Route::post('upload_image', 'TopicsController@uploadImage')
+     ->name('topics.upload_image');

@@ -16141,6 +16141,9 @@ body {
 
 /******** header ********/
 .navbar-static-top {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   margin-bottom: 40px;
   margin-top: 0px;
 }
