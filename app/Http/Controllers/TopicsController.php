@@ -80,13 +80,16 @@ class TopicsController extends Controller
 			return redirect()->route('topics.show', $topic->id)->with('success', '更新成功！');
 		}
 
-	public function destroy(Topic $topic)
-	{
-		$this->authorize('destroy', $topic);
-		$topic->delete();
+		/**
+		 * 刪除文章
+		 */
+		public function destroy(Topic $topic)
+		{
+				$this->authorize('destroy', $topic);
+				$topic->delete();
 
-		return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
-	}
+				return redirect()->route('topics.index')->with('success', '刪除成功！');
+		}
 		public function uploadImage(Request $request, ImageUploadHandler $uploader)
 		{
 				// 初始化返回資料，默認為失敗的
