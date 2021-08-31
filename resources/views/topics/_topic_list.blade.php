@@ -20,7 +20,7 @@
           </div>
 
           <small class="media-body meta text-secondary">
-              <div class="my-2 text-dark">{{ Str::limit($topic->body, 100, $end = '...') }}</div>
+              <div class="my-2 text-dark">{{ Str::limit($topic->body, 70, $end = '...') }}</div>
               <a class="text-secondary" href="{{ route('categories.show', $topic->category_id) }}" title="{{ $topic->category->name }}">
                 <i class="far fa-folder"></i>
                 {{ $topic->category->name }}

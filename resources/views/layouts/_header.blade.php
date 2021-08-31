@@ -21,6 +21,11 @@
           <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登入</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">註冊</a></li>
         @else
+          <li class="nav-item">
+            <a class="nav-link mt-1 mr-3 font-weight-bold" href="{{ route('topics.create') }}">
+              <i class="fas fa-pen"></i>
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle rounded-circle mr-1" width="30px" height="30px">

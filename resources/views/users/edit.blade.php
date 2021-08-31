@@ -8,9 +8,9 @@
 
     <div class="col-md-8">
 
-      <div class="card shadow">
-        <div class="card-header text-white bg-dark">
-          <h3 class="mb-0">{{__('編輯個人資料')}}</h3>
+      <div class="card rounded-0">
+        <div class="card-header bg-white">
+          <h3 class="my-3">{{__('編輯個人資料')}}</h3>
         </div>
 
         <div class="card-body">

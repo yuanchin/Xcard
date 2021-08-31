@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow">
-                <div class="card-header text-white bg-dark">{{ __('重設密碼') }}</div>
+            <div class="card rounded-0">
+                <div class="card-header bg-white mt-1"><h3>{{ __('重設密碼') }}</h3></div>
 
                 <div class="card-body m-1">
                     @if (session('status'))

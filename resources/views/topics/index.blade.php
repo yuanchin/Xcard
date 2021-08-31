@@ -7,13 +7,16 @@
 <div class="row mb-5">
   
   <div class="col-lg-2 col-md-2 sidebar">
-    @include('topics._sidebar')
+    @include('topics._sidebar_left')
   </div>
 
   <div class="col-lg-7 col-md-7 topic-list">
-    <div class="card">
+    <div class="card rounded-0">
 
       <div class="card-header bg-transparent">
+        @if (isset($category))
+          <div class="h3 mt-1 mb-4 ml-1">{{ $category->name }}</div>
+        @endif
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a class="nav-link {{ active_class( ! if_query('order', 'recent')) }}"
@@ -43,9 +46,7 @@
 
   <div class="col-lg-3 col-md-3">
     @if (isset($category))
-      <div class="alert alert-info" role="alert">
-        {{ $category->name }} ：{{ $category->description }}
-      </div>
+      @include('topics._sidebar_right', ['category' => $category])
     @endif
   </div>
 
