@@ -3,7 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Topic;
-use Stichoza\GoogleTranslate\GoogleTranslate;
+use App\Jobs\TranslateSlug;
 
 // creating, created, updating, updated, saving,
 // saved,  deleting, deleted, restoring, restored
@@ -12,11 +12,20 @@ class TopicObserver
 {
     public function saving(Topic $topic)
     {
+        // XSS 過濾
         $topic->body = clean($topic->body, 'user_topic_body');
-        $topic->excerpt = make_excerpt($topic->body);
 
+        // 生成文章摘錄
+        $topic->excerpt = make_excerpt($topic->body);
+        
+    }
+
+    public function saved(Topic $topic)
+    {
         if (!$topic->slug) {
-            $topic->slug = str_slug(GoogleTranslate::trans($topic->title, 'en', null));
+
+            // 推送任務到隊列
+            dispatch(new TranslateSlug($topic));
         }
     }
 }
