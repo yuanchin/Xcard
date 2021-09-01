@@ -11,16 +11,16 @@
         <div class="media-body">
 
           <div class="media-heading mt-0 mb-1">
-            <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
+            <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
               <strong>{{ $topic->title }}</strong>
             </a>
-            <a class="float-right" href="{{ route('topics.show', [$topic->id]) }}">
+            <a class="float-right" href="{{ $topic->link() }}">
               <span class="badge badge-secondary badge-pill"> {{ $topic->reply_count }} </span>
             </a>
           </div>
 
           <small class="media-body meta text-secondary">
-              <div class="my-2 text-dark">{{ Str::limit($topic->body, 70, $end = '...') }}</div>
+              <div class="my-2 text-dark">{!! Str::limit($topic->body, 50, $end = '...') !!}</div>
               <a class="text-secondary" href="{{ route('categories.show', $topic->category_id) }}" title="{{ $topic->category->name }}">
                 <i class="far fa-folder"></i>
                 {{ $topic->category->name }}
