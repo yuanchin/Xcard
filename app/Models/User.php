@@ -53,6 +53,14 @@ class User extends Authenticatable implements MustVerifyEmailContract
     }
 
     /**
+     * 1 to many，一個使用者可以有多個回覆
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
+    /**
      * 
      */
     public function isAuthorOf($model)

@@ -14,8 +14,6 @@ class Topic extends Model
 
     /**
      * 1 to 1，一個話題屬於一個分類
-     * 
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function category()
     {
@@ -24,12 +22,18 @@ class Topic extends Model
 
     /**
      * 1 to 1，一個話題屬於一個作者
-     * 
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * 1 to many，一個話題擁有多個回覆
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
     public function scopeWithOrder($query, $order)
