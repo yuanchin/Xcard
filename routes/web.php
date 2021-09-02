@@ -64,3 +64,6 @@ Route::post('upload_image', 'TopicsController@uploadImage')
 
 // 回覆資源路由
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+
+// 通知資源路由
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);

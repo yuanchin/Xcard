@@ -16595,4 +16595,9 @@ body {
   color: inherit;
 }
 
+/******** 消息通知 ********/
+.notification-badge {
+  margin-top: 4px;
+}
+
 /***********************  TOP Bar ********************/

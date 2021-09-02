@@ -26,6 +26,13 @@
               <i class="fas fa-pen"></i>
             </a>
           </li>
+          <li class="nav-item notification-badge">
+            <a class="nav-link mr-4 text-{{ Auth::user()->notification_count > 0 ? 'danger' : 'dark' }}" href="{{ route('notifications.index') }}">
+              <i class="fas fa-bell"></i>
+              {{ Auth::user()->notification_count }}
+            </a>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="{{ Auth::user()->avatar }}" class="img-responsive img-circle rounded-circle mr-1" width="30px" height="30px">
