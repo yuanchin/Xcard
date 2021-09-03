@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow">
-                <div class="card-header text-white bg-dark">{{ __('驗證 E-mail') }}</div>
+            <div class="card">
+                <div class="card-header text-dark bg-white"><h3>{{ __('驗證 E-mail') }}</h3></div>
 
                 <div class="card-body m-2">
                     @if (session('resent'))

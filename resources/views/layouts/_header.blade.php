@@ -29,7 +29,9 @@
           <li class="nav-item notification-badge">
             <a class="nav-link mr-4 text-{{ Auth::user()->notification_count > 0 ? 'danger' : 'dark' }}" href="{{ route('notifications.index') }}">
               <i class="fas fa-bell"></i>
-              {{ Auth::user()->notification_count }}
+              @if (Auth::user()->notification_count > 0)
+                {{ Auth::user()->notification_count }}
+              @endif
             </a>
           </li>
 
