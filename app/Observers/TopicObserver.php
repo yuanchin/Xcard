@@ -23,11 +23,14 @@ class TopicObserver
 
     public function saved(Topic $topic)
     {
-        if (!$topic->slug) {
+        if ( ! app()->runningInConsole()) {
+            if (!$topic->slug) {
 
             // 推送任務到隊列
             dispatch(new TranslateSlug($topic));
+            }
         }
+        
     }
 
     public function deleted(Topic $topic)
