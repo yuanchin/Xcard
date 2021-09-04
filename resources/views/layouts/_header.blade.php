@@ -41,9 +41,18 @@
             {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              @can('manage_contents')
+                <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">
+                  <div class="user-item">
+                    <div><i class="fas fa-tachometer-alt"></i></div>
+                    <div>後臺管理</div>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+              @endcan
               <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
                 <div class="user-item">
-                  <div><i class="far fa-user"></i></div>
+                  <div><i class="far fa-user mr-1"></i></div>
                   <div>個人中心</div>
                 </div>
               </a>
