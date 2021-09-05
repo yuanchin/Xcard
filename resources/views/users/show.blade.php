@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', $user->name . ' 的個人中心')
+@section('title', $user->name . '的個人中心')
 
 @section('content')
 
 <div class="row">
 
   <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
-    <div class="card shadow">
-      <img class="card-img-top rounded-circle" src="{{ $user->avatar }}" alt="{{ $user->name }}">
-      <div class="card-body mt-2">
+    <div class="card ">
+      <img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">
+      <div class="card-body">
             <h5><strong>個人簡介</strong></h5>
             <p>{{ $user->introduction }}</p>
             <hr>
@@ -32,12 +32,12 @@
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <a class="nav-link bg-transparent {{ active_class(if_query('tab', null)) }}" href="{{ route('users.show', $user->id) }}">
-              {{ $user->name }} 的文章
+              {{ $user->name }} 的話題
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link bg-transparent {{ active_class(if_query('tab', 'replies')) }}" href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}">
-              {{ $user->name }} 的回覆
+            {{ $user->name }} 的回覆
             </a>
           </li>
         </ul>
