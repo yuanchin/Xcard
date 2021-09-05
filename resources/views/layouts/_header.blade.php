@@ -27,10 +27,10 @@
             </a>
           </li>
           <li class="nav-item notification-badge">
-            <a class="nav-link mr-4 text-{{ Auth::user()->notification_count > 0 ? 'danger' : 'dark' }}" href="{{ route('notifications.index') }}">
+            <a class="nav-link mr-4 text-secondary" href="{{ route('notifications.index') }}">
               <i class="fas fa-bell"></i>
               @if (Auth::user()->notification_count > 0)
-                {{ Auth::user()->notification_count }}
+                <sup><span class="text-danger">{{ Auth::user()->notification_count }}</span></sup>
               @endif
             </a>
           </li>
