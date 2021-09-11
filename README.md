@@ -62,8 +62,14 @@ cd ~/Homestead && vagrant provision && vagrant reload
 ```
 - `vagrant provision`為重新加載`Homestead.yaml`的配置
 - `vagrant reload`為重新啟動`vagrant`
-    
-5).進行 env 環境設置
+
+5).安裝依賴套件
+
+```shell
+composer install
+```
+
+6).進行 env 環境設置
 
 ```
 APP_NAME=Xcard
@@ -77,7 +83,7 @@ DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 
-6).讓開發環境代碼風格一致，編輯`.editorconfig`文件：
+7).讓開發環境代碼風格一致，編輯`.editorconfig`文件：
 
 ```
 root = true
@@ -101,7 +107,7 @@ indent_style = space
 indent_size = 2
 ```
 
-7).編輯`config/app.php`：
+8).編輯`config/app.php`：
 
 ```
 'timezone' => 'Asia/Taipei',
