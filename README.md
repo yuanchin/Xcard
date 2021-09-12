@@ -66,6 +66,10 @@ cd ~/Homestead && vagrant provision && vagrant reload
 5).安裝依賴套件
 
 ```shell
+npm install
+```
+
+```shell
 composer install
 ```
 
