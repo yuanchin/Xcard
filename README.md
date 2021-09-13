@@ -66,11 +66,11 @@ cd ~/Homestead && vagrant provision && vagrant reload
 5).安裝依賴套件
 
 ```shell
-npm install
+composer install
 ```
 
 ```shell
-composer install
+npm install
 ```
 
 6).進行 env 環境設置
@@ -111,11 +111,10 @@ indent_style = space
 indent_size = 2
 ```
 
-8).編輯`config/app.php`：
+8).將資料表結構建立起來並且填充資料：
 
-```
-'timezone' => 'Asia/Taipei',
-'locale' => 'zh-TW',
+```shell
+php artisan migrate --seed
 ```
 
 
