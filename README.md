@@ -3,6 +3,14 @@
 > 🚨此項目僅為練習項目而已！可以供參考學習
 
 ## 項目演示
+> 前台展示
+
+<img src=https://github.com/YuanChin/project_git/blob/master/xcard/1.gif width=48% /> <img src=https://github.com/YuanChin/project_git/blob/master/xcard/2.gif width=48% />
+<img src=https://github.com/YuanChin/project_git/blob/master/xcard/3.gif width=48% />
+
+> 後台展示
+
+<img src=https://github.com/YuanChin/project_git/blob/master/xcard/4.gif width=48% /> <img src=https://github.com/YuanChin/project_git/blob/master/xcard/5.gif width=48% />
 
 
 ## 運行環境要求
