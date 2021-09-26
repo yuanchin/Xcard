@@ -98,7 +98,12 @@ DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
 
-7).讓開發環境代碼風格一致，編輯`.editorconfig`文件：
+7).產生新的APP_KEY
+```shell
+php artisan key:generate
+```
+
+8).讓開發環境代碼風格一致，編輯`.editorconfig`文件：
 
 ```
 root = true
@@ -122,7 +127,7 @@ indent_style = space
 indent_size = 2
 ```
 
-8).將資料表結構建立起來並且填充資料：
+9).將資料表結構建立起來並且填充資料：
 
 ```shell
 php artisan migrate --seed
